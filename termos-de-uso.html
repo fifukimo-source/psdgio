@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso — GuiasPedágio</title>
+  <meta name="description" content="Termos e Condições de Uso da plataforma GuiasPedágio." />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:         #06060f;
+      --surface:    #0c0c1d;
+      --border:     rgba(255,255,255,0.06);
+      --border-hi:  rgba(255,255,255,0.11);
+      --accent:     #4f7bf9;
+      --accent-dim: rgba(79,123,249,0.10);
+      --text:       #eeeef6;
+      --text-2:     #9494b0;
+      --text-3:     #55556e;
+      --font:       'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --r:          10px;
+      --r-lg:       16px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    .nav {
+      position: sticky; top: 0; z-index: 200; height: 58px;
+      display: flex; align-items: center;
+      background: rgba(6,6,15,0.88);
+      backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav .wrap { display: flex; align-items: center; justify-content: space-between; }
+    .nav-logo {
+      display: flex; align-items: center; gap: 9px;
+      font-size: 0.93rem; font-weight: 700; letter-spacing: -0.02em;
+    }
+    .nav-logo-mark {
+      width: 28px; height: 28px; background: var(--accent);
+      border-radius: 7px; display: grid; place-items: center;
+    }
+    .btn-back {
+      font-size: 0.78rem; font-weight: 500; color: var(--text-2);
+      border: 1px solid var(--border-hi); padding: 7px 16px;
+      border-radius: var(--r); transition: color 0.15s, border-color 0.15s;
+    }
+    .btn-back:hover { color: var(--text); border-color: var(--accent); }
+
+    /* Page */
+    .page { padding: 60px 0 96px; }
+    .doc-wrap { max-width: 760px; }
+    .doc-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent-dim);
+      border: 1px solid rgba(79,123,249,0.18);
+      color: #7fa8fc;
+      font-size: 0.70rem; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 4px 12px;
+      border-radius: 100px; margin-bottom: 22px;
+    }
+    .doc-title {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 800; letter-spacing: -0.04em; line-height: 1.08;
+      margin-bottom: 10px;
+    }
+    .doc-date {
+      font-size: 0.77rem; color: var(--text-3);
+      margin-bottom: 36px; padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-intro {
+      font-size: 0.95rem; color: var(--text-2); line-height: 1.78;
+      margin-bottom: 40px;
+    }
+
+    /* Company box */
+    .company-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--r-lg);
+      padding: 20px 22px;
+      margin-bottom: 36px;
+    }
+    .company-box p {
+      font-size: 0.82rem; color: var(--text-2); line-height: 1.9; margin: 0;
+    }
+    .company-box strong { color: var(--text); font-weight: 600; }
+
+    /* Sections */
+    .doc-sec {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .doc-sec:last-of-type { border-bottom: none; }
+    .doc-sec h2 {
+      font-size: 0.88rem; font-weight: 700;
+      letter-spacing: -0.01em; color: var(--text);
+      margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .doc-sec h2::before {
+      content: '';
+      width: 3px; height: 14px;
+      background: var(--accent);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .doc-sec p {
+      font-size: 0.875rem; color: var(--text-2);
+      line-height: 1.80; margin-bottom: 12px;
+    }
+    .doc-sec p:last-child { margin-bottom: 0; }
+    .doc-list {
+      list-style: none; padding: 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .doc-list li {
+      font-size: 0.875rem; color: var(--text-2);
+      line-height: 1.72; padding-left: 16px; position: relative;
+    }
+    .doc-list li::before {
+      content: '—'; position: absolute; left: 0;
+      color: var(--text-3); font-size: 0.75rem; top: 2px;
+    }
+
+    /* CTA */
+    .doc-cta {
+      display: flex; gap: 10px; flex-wrap: wrap;
+      margin-top: 40px; padding-top: 28px;
+      border-top: 1px solid var(--border);
+    }
+    .btn-p {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--accent); color: #fff;
+      font-size: 0.82rem; font-weight: 600;
+      padding: 10px 20px; border-radius: var(--r);
+      transition: opacity 0.15s;
+    }
+    .btn-p:hover { opacity: 0.84; }
+    .btn-g {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: transparent; border: 1px solid var(--border-hi);
+      color: var(--text-2); font-size: 0.82rem; font-weight: 500;
+      padding: 10px 20px; border-radius: var(--r);
+      transition: border-color 0.15s, color 0.15s;
+    }
+    .btn-g:hover { border-color: var(--accent); color: var(--text); }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border); padding: 36px 0;
+    }
+    .footer .wrap {
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 16px;
+    }
+    .footer-info { font-size: 0.72rem; color: var(--text-3); line-height: 1.8; }
+    .footer-link {
+      font-size: 0.76rem; color: var(--text-2); transition: color 0.15s;
+    }
+    .footer-link:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      .page { padding: 40px 0 72px; }
+      .doc-cta { flex-direction: column; }
+      .footer .wrap { flex-direction: column; align-items: flex-start; gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        GuiasPedágio
+      </a>
+      <a href="index.html" class="btn-back">← Voltar</a>
+    </div>
+  </nav>
+
+  <main class="page">
+    <div class="wrap">
+      <article class="doc-wrap">
+        <div class="doc-eyebrow">Legal</div>
+        <h1 class="doc-title">Termos de Uso</h1>
+        <p class="doc-date">Última atualização: 30/03/2026</p>
+
+        <div class="company-box">
+          <p>
+            <strong>Prestador do serviço:</strong><br>
+            65.543.195 Romulo Michels &nbsp;&middot;&nbsp; CNPJ: 65.543.195/0001-61<br>
+            (48) 99993-1569 &nbsp;&middot;&nbsp; fifukimo@gmail.com
+          </p>
+        </div>
+
+        <p class="doc-intro">Estes Termos regulam o acesso e uso da plataforma GuiasPedágio. Ao utilizar o serviço, você declara que leu, compreendeu e concorda integralmente com as condições descritas abaixo.</p>
+
+        <section class="doc-sec">
+          <h2>1. Objeto do serviço</h2>
+          <p>A plataforma GuiasPedágio permite a consulta de pendências de pedágio digital vinculadas à placa informada, bem como a regularização por meio de gateway de pagamento terceirizado via PIX.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>2. Elegibilidade e responsabilidade do usuário</h2>
+          <ul class="doc-list">
+            <li>Fornecer dados verdadeiros, completos e atualizados.</li>
+            <li>Utilizar o serviço exclusivamente para finalidades lícitas.</li>
+            <li>Assumir responsabilidade pela placa informada e pela autorização de consulta.</li>
+            <li>Não utilizar meios automatizados para acesso massivo à plataforma sem autorização.</li>
+          </ul>
+        </section>
+
+        <section class="doc-sec">
+          <h2>3. Condições de pagamento</h2>
+          <p>O valor exibido no checkout inclui os encargos aplicáveis ao serviço. A aprovação do pagamento depende das regras operacionais do gateway integrado e da instituição financeira do usuário.</p>
+          <p>O serviço de consulta é gratuito. Cobranças ocorrem exclusivamente quando o usuário opta pela regularização de débitos identificados.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>4. Prazos de regularização</h2>
+          <p>Após confirmação do pagamento, a atualização do status da pendência pode ocorrer dentro do prazo operacional das integrações envolvidas. Eventuais indisponibilidades de sistemas de terceiros podem impactar o prazo de processamento.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>5. Limitação de responsabilidade</h2>
+          <p>A GuiasPedágio atua como intermediadora tecnológica de consulta e pagamento. Não se responsabiliza por indisponibilidade, atraso ou divergência oriunda de bancos, concessionárias, APIs externas ou provedores de internet.</p>
+          <p>A plataforma não garante a completude ou exatidão das informações obtidas de fontes externas.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>6. Propriedade intelectual</h2>
+          <p>Elementos visuais, código-fonte, marca e conteúdo da plataforma são protegidos por lei. É proibida a cópia integral, engenharia reversa, redistribuição ou uso comercial sem autorização expressa e por escrito.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>7. Proteção de dados</h2>
+          <p>O tratamento de dados pessoais segue a legislação aplicável, em especial a LGPD (Lei nº 13.709/2018), e está detalhado na <a href="politica-de-privacidade.html" style="color:var(--accent)">Política de Privacidade</a>.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>8. Alterações dos termos</h2>
+          <p>Estes Termos podem ser atualizados a qualquer momento. A versão vigente estará sempre disponível nesta página, com indicação da data de última atualização. O uso continuado após alterações implica aceitação das novas condições.</p>
+        </section>
+
+        <section class="doc-sec">
+          <h2>9. Foro e legislação aplicável</h2>
+          <p>Aplica-se a legislação brasileira. Fica eleito o foro da comarca do prestador do serviço para dirimir eventuais controvérsias, salvo disposição legal em contrário.</p>
+        </section>
+
+        <div class="doc-cta">
+          <a href="politica-de-privacidade.html" class="btn-p">Ler Política de Privacidade</a>
+          <a href="index.html" class="btn-g">Voltar ao início</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer-info">
+        65.543.195 Romulo Michels &nbsp;&middot;&nbsp; CNPJ: 65.543.195/0001-61<br>
+        © 2026 GuiasPedágio. Todos os direitos reservados.
+      </p>
+      <a href="politica-de-privacidade.html" class="footer-link">Política de Privacidade</a>
+    </div>
+  </footer>
+
+</body>
+</html>
